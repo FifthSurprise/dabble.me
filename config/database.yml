@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: project_development
+  database: dabbleme_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -54,10 +54,6 @@ development:
 test:
   <<: *default
   database: <%= ENV['DABBLE_ME_TEST_DB_DATABASE'] || 'dabbleme_test' %>
-  username: <%= ENV['DABBLE_ME_TEST_DB_USER'] || 'postgres' %>
-  password: <%= ENV['DABBLE_ME_TEST_DB_PASSWORD'] %>
-  host: <%= ENV['DABBLE_ME_TEST_DB_HOST'] || 'localhost' %>
-  port: <%= ENV['DABBLE_ME_TEST_DB_PORT'] || '5432' %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

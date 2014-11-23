@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20141013050441) do
     t.text     "image_url"
     t.text     "original_email_body"
     t.integer  "inspiration_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
   end
 
   add_index "entries", ["user_id"], name: "index_entries_on_user_id", using: :btree
