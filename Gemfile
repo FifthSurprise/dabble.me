@@ -110,5 +110,4 @@ group :staging, :production do
 end
 
 group :production do
-  gem "skylight", "~> 0.4.0.beta2"
 end
