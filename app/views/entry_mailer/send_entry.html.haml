@@ -30,4 +30,5 @@
         Keep Dabble Me going strong &amp; unlock premium features:
         =link_to "Donate now!", "https://#{ENV['MAIN_DOMAIN']}/donate"
       - else
-        %i=@random_inspiration.body
+        - unless @random_inspiration.nil?
+          %i=@random_inspiration.body
